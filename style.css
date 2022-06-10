@@ -14,3 +14,17 @@ button {
     
     color: red;
 }
+h2 {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.first{
+    margin-left: 100px;
+    border: 1px;
+}
+.second {
+    margin-left: 100px;
+}
+.result{
+    margin-left: 100px;
+}
