@@ -12,22 +12,23 @@
 <body>
     <h1>MATRIX ADDITION</h1>
     <button onclick="start()">START</button>
-    <table class="first">
-        <tr>
-            <td id="input_1"></td>
-            <td id="input_2"></td>
-            <td id="input_3"></td>
+    <div class="array">  
+        <table class="first">
+            <tr>
+                <td id="input_1"></td>
+                <td id="input_2"></td>
+                <td id="input_3"></td>
         </tr>
         <tr>
             <td id="input_4"></td>
             <td id="input_5"></td>
             <td id="input_6"></td>
-        <tr>
-            <td id="input_7"></td>
-            <td id="input_8"></td>
-            <td id="input_9"></td>
-        </tr>
-    </table>
+            <tr>
+                <td id="input_7"></td>
+                <td id="input_8"></td>
+                <td id="input_9"></td>
+            </tr>
+        </table>
     <table class="second">
         <tr>
             <td id="input_10"></td>
@@ -38,38 +39,39 @@
             <td id="input_13"></td>
             <td id="input_14"></td>
             <td id="input_15"></td>
-        <tr>
-            <td id="input_16"></td>
-            <td id="input_17"></td>
-            <td id="input_18"></td>
-        </tr>
-    </table>
-    <br><br>
-    <table class="result">
-        <tr>
-            <td id="input_19"></td>
-            <td id="input_20"></td>
-            <td id="input_21"></td>
-        </tr>
-        <tr>
-            <td id="input_22"></td>
+            <tr>
+                <td id="input_16"></td>
+                <td id="input_17"></td>
+                <td id="input_18"></td>
+            </tr>
+        </table>
+        <br><br>
+        <table class="result">
+            <tr>
+                <td id="input_19"></td>
+                <td id="input_20"></td>
+                <td id="input_21"></td>
+            </tr>
+            <tr>
+                <td id="input_22"></td>
             <td id="input_23"></td>
             <td id="input_24"></td>
-        <tr>
-            <td id="input_25"></td>
-            <td id="input_26"></td>
-            <td id="input_27"></td>
-        </tr>
-    </table>
-    <script>
-        function start (){
-            
-            let input1 = [[0,0,0],[0,0,0],[0,0,0]];
+            <tr>
+                <td id="input_25"></td>
+                <td id="input_26"></td>
+                <td id="input_27"></td>
+            </tr>
+        </table>
+        </div>
+        <script>
+            function start() {
+                
+            let input1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
             for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 3; j++) {
                     input1[i][j] = Number(prompt("Enter First Array Numbers"));
-				}
-			}
+                }
+            }
             document.querySelector("#input_1").innerHTML = input1[0][0];
             document.querySelector("#input_2").innerHTML = input1[0][1];
             document.querySelector("#input_3").innerHTML = input1[0][2];
@@ -79,49 +81,49 @@
             document.querySelector("#input_7").innerHTML = input1[2][0];
             document.querySelector("#input_8").innerHTML = input1[2][1];
             document.querySelector("#input_9").innerHTML = input1[2][2];
-            
-            
-            let input2 = [[0,0,0],[0,0,0],[0,0,0]]
-            for (let i = 0 ; i < 3; i++) {
-                for (let j = 0; j < 3 ; j++) {
-                    input2[i][j] =Number(prompt("Enter Second Array Numbers"));
-                    
+
+
+            let input2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    input2[i][j] = Number(prompt("Enter Second Array Numbers"));
+
                 }
             }
-            
-            
-            
+
+
+
             document.querySelector("#input_10").innerHTML = input1[0][0];
-			document.querySelector("#input_11").innerHTML = input1[0][1];
-			document.querySelector("#input_12").innerHTML = input1[0][2];
-			document.querySelector("#input_13").innerHTML = input1[1][0];
-			document.querySelector("#input_14").innerHTML = input1[1][1];
-			document.querySelector("#input_15").innerHTML = input1[1][2];
-			document.querySelector("#input_16").innerHTML = input1[2][0];
-			document.querySelector("#input_17").innerHTML = input1[2][1];
-			document.querySelector("#input_18").innerHTML = input1[2][2]; 
-            
-            
-            let result = [[0,0,0],[0,0,0],[0,0,0]]
-            for (let i = 0 ; i < 3; i++) {
-                for (let j = 0; j < 3 ; j++) {  
-                 result[i][j] = input1[i][j] + input2[i][j];
+            document.querySelector("#input_11").innerHTML = input1[0][1];
+            document.querySelector("#input_12").innerHTML = input1[0][2];
+            document.querySelector("#input_13").innerHTML = input1[1][0];
+            document.querySelector("#input_14").innerHTML = input1[1][1];
+            document.querySelector("#input_15").innerHTML = input1[1][2];
+            document.querySelector("#input_16").innerHTML = input1[2][0];
+            document.querySelector("#input_17").innerHTML = input1[2][1];
+            document.querySelector("#input_18").innerHTML = input1[2][2];
+
+
+            let result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    result[i][j] = input1[i][j] + input2[i][j];
                 }
             }
             document.querySelector("#input_19").innerHTML = result[0][0];
-			document.querySelector("#input_20").innerHTML = result[0][1];
-			document.querySelector("#input_21").innerHTML = result[0][2];
-			document.querySelector("#input_22").innerHTML = result[1][0];
-			document.querySelector("#input_23").innerHTML = result[1][1];
-			document.querySelector("#input_24").innerHTML = result[1][2];
-			document.querySelector("#input_25").innerHTML = result[2][0];
-			document.querySelector("#input_26").innerHTML = result[2][1];
-			document.querySelector("#input_27").innerHTML = result[2][2];
-            
-            
+            document.querySelector("#input_20").innerHTML = result[0][1];
+            document.querySelector("#input_21").innerHTML = result[0][2];
+            document.querySelector("#input_22").innerHTML = result[1][0];
+            document.querySelector("#input_23").innerHTML = result[1][1];
+            document.querySelector("#input_24").innerHTML = result[1][2];
+            document.querySelector("#input_25").innerHTML = result[2][0];
+            document.querySelector("#input_26").innerHTML = result[2][1];
+            document.querySelector("#input_27").innerHTML = result[2][2];
+
+
         }
-        
-        </script>
-            </body>
-            
-            </html>
+
+    </script>
+</body>
+
+</html>

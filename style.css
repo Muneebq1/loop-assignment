@@ -1,3 +1,16 @@
 body {
     text-align: center;
+  background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+}
+.array {
+    display: flex;
+    
+
+}
+button {
+    
+    color: red;
 }
